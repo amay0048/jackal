@@ -2,6 +2,7 @@ var JkError = require('./error');
 var onExit = require('./onExit');
 var onConfig = require('../config/onConfig');
 var onMarket = require('../market/onMarket');
+var onTrade = require('../trade/onTrade');
 
 var separator = ' ';
 
@@ -18,6 +19,9 @@ module.exports = function onLine(line) {
             break;
         case 'market':
             onMarket.apply(null, input);
+            break;
+        case 'trade':
+            onTrade.apply(null, input);
             break;
         default:
             throw new JkError('unrecognised command');
