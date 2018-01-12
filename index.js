@@ -1,4 +1,7 @@
-global.Config = require('./config/Config');
+global.Config = require('./config/__Config');
+global.Client = {
+  Hitbtc: require('./client/hitbtc/__init')
+};
 
 var cliParser = require('./cli/parser');
 
