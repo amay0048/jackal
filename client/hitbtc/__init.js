@@ -1,5 +1,6 @@
 const HitBTC = require('hitbtc-api');
 
+const logger = require('../../log/logger');
 const onSymbols = require('./onSymbols');
 const onTicker = require('./onTicker');
 const onBalance = require('./onBalance');
@@ -10,13 +11,30 @@ let { public, secret } = require('./keys.json');
 function JkHitbtc() {
     this.symbols = [];
     this.rest = new HitBTC.default({ key: public, secret: secret, isDemo: false });
-    // this.socket = {};
+    this.socket = new HitBTC.default.WebsocketClient({ key: public, secret: secret, isDemo: false });
 }
 
 JkHitbtc.prototype.init = function () {
     this.onSymbols().then(symbols => {
-        console.log(symbols);
         this.symbols = symbols;
+    });
+
+    this.socket.addMarketMessageListener(data => {
+        var refresh;
+        if (data.MarketDataSnapshotFullRefresh) {
+            refresh = data.MarketDataSnapshotFullRefresh;
+        } else {
+            refresh = data.MarketDataIncrementalRefresh;
+        }
+
+        if (!(global.Config && global.Config.getMonitorSymbol)) return;
+        if (refresh.symbol !== global.Config.getMonitorSymbol()) return;
+
+        if (refresh.bid[0] && refresh.bid[0].size)
+            logger.log(`${refresh.timestamp} - ${refresh.symbol}: bid =>`, refresh.bid[0]);
+
+        if (refresh.ask[0] && refresh.ask[0].size)
+            logger.log(`${refresh.timestamp} - ${refresh.symbol}: ask =>`, refresh.ask[0]);
     });
 }
 

@@ -39,4 +39,12 @@ __Config.prototype.setBalance = function setBalance(value) {
     this.balance = value;
 }
 
+__Config.prototype.setMonitorCoin = function (coin) {
+    this.monitor.coin = String(coin).toUpperCase();
+}
+
+__Config.prototype.getMonitorSymbol = function () {
+    return String(this.monitor.coin) + String(this.trade.base);
+}
+
 module.exports = new __Config();

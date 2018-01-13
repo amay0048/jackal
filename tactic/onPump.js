@@ -8,11 +8,13 @@ const timers = require('timers');
 module.exports = function onConfig(...args) {
     var [ coin ] = args;
     
-    if (!coin) throw new JkError('onSymbols: the command is not supported by the current exchange');
+    if (!coin) throw new JkError('onPump: the command is not supported by the current exchange');
+
+    global.Config.setMonitorCoin(coin);
 
     var stake = Number(global.Config.balance[global.Config.trade.base].cash) * Number(global.Config.trade.stake);
     // console.log(stake);
-    var splits = new Array(11);
+    var splits = new Array(10);
     splits.fill(stake / splits.length);
     // console.log(splits);
 
@@ -26,8 +28,7 @@ module.exports = function onConfig(...args) {
 
         splits.forEach((split, index) => {
             var price = tick.ask;
-            // Some extra weight for debugging
-            // price = price * 0.7;
+            price = price * 0.7;
             var qty = Math.floor((split / price) / lot);
 
             onBuy(coin, price, qty, 'IOC');
