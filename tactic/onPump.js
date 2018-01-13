@@ -29,7 +29,7 @@ module.exports = function onConfig(...args) {
     //     if (tick && tick.error) throw tick.error;
 
         splits.forEach((split, index) => {
-            var price = lastAsk * 1.05;
+            var price = lastAsk * 1.04;
             // price = price * 0.7;
             var qty = Math.floor((split / price) / lot);
 

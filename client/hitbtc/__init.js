@@ -5,6 +5,7 @@ const onSymbols = require('./onSymbols');
 const onTicker = require('./onTicker');
 const onBalance = require('./onBalance');
 const onOrder = require('./onOrder');
+const onMarketMessage = require('./onMarketMessage');
 
 let { public, secret } = require('./keys.json');
 
@@ -17,31 +18,9 @@ function JkHitbtc() {
 JkHitbtc.prototype.init = function () {
     this.onSymbols().then(symbols => {
         this.symbols = symbols;
-    });
-
-    this.socket.addMarketMessageListener(data => {
-        if (!this.symbols) return;
-
-        var refresh;
-        if (data.MarketDataSnapshotFullRefresh) {
-            refresh = data.MarketDataSnapshotFullRefresh;
-        } else {
-            refresh = data.MarketDataIncrementalRefresh;
-        }
-
-        if (this.symbols && refresh.ask[0] && refresh.ask[0].size)
-            this.symbols[refresh.symbol].last.ask = Number(refresh.ask[0].price);
-        if (this.symbols && refresh.bid[0] && refresh.bid[0].size)
-            this.symbols[refresh.symbol].last.bid = Number(refresh.bid[0].price);
-
-        if (!(global.Config && global.Config.getMonitorSymbol)) return;
-        if (refresh.symbol !== global.Config.getMonitorSymbol()) return;
-
-        if (refresh.bid[0] && refresh.bid[0].size)
-            logger.log(`${refresh.timestamp} - ${refresh.symbol}: bid =>`, refresh.bid[0]);
-
-        if (refresh.ask[0] && refresh.ask[0].size)
-            logger.log(`${refresh.timestamp} - ${refresh.symbol}: ask =>`, refresh.ask[0]);
+        this.socket.addMarketMessageListener((data) => {
+            onMarketMessage.call(this, data);
+        });
     });
 }
 
