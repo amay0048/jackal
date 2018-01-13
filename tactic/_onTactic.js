@@ -7,7 +7,11 @@ var separator = ' ';
 module.exports = function onConfig(...args) {
     switch(args.shift()) {
         case 'pump':
-            onPump.apply(null, args);
+            try {
+                onPump.apply(null, args);
+            } catch (e) {
+                logger.log('onPump: error input =>', args);    
+            }
             break;
         default:
             logger.log('onTactic: unrecognised command');

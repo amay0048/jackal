@@ -9,7 +9,7 @@ const onOrder = require('./onOrder');
 let { public, secret } = require('./keys.json');
 
 function JkHitbtc() {
-    this.symbols = [];
+    this.symbols = null;
     this.rest = new HitBTC.default({ key: public, secret: secret, isDemo: false });
     this.socket = new HitBTC.default.WebsocketClient({ key: public, secret: secret, isDemo: false });
 }
@@ -20,12 +20,19 @@ JkHitbtc.prototype.init = function () {
     });
 
     this.socket.addMarketMessageListener(data => {
+        if (!this.symbols) return;
+
         var refresh;
         if (data.MarketDataSnapshotFullRefresh) {
             refresh = data.MarketDataSnapshotFullRefresh;
         } else {
             refresh = data.MarketDataIncrementalRefresh;
         }
+
+        if (this.symbols && refresh.ask[0] && refresh.ask[0].size)
+            this.symbols[refresh.symbol].last.ask = Number(refresh.ask[0].price);
+        if (this.symbols && refresh.bid[0] && refresh.bid[0].size)
+            this.symbols[refresh.symbol].last.bid = Number(refresh.bid[0].price);
 
         if (!(global.Config && global.Config.getMonitorSymbol)) return;
         if (refresh.symbol !== global.Config.getMonitorSymbol()) return;
@@ -74,7 +81,7 @@ JkHitbtc.prototype.onSell = function (...args) {
 }
 
 JkHitbtc.prototype.getSymbolMeta = function (symbol) {
-    return this.symbols.find(s => (s.symbol == symbol));
+    return this.symbols[symbol];
 }
 
 module.exports = new JkHitbtc();

@@ -1,3 +1,5 @@
+const logger = require('./log/logger');
+
 global.Config = require('./config/__Config');
 global.Client = {
   Hitbtc: require('./client/hitbtc/__init')

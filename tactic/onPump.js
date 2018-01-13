@@ -13,22 +13,24 @@ module.exports = function onConfig(...args) {
     global.Config.setMonitorCoin(coin);
 
     var stake = Number(global.Config.balance[global.Config.trade.base].cash) * Number(global.Config.trade.stake);
-    // console.log(stake);
+
     var splits = new Array(10);
     splits.fill(stake / splits.length);
-    // console.log(splits);
 
     var symbol = String(coin).concat(global.Config.trade.base).toUpperCase();
     var symbolMeta = global.Client.Hitbtc.getSymbolMeta(symbol);
+    var lastAsk = symbolMeta.last.ask;
     var lot = symbolMeta.lot;
 
-    onTicker(coin)
-    .then(tick => {
-        if (tick && tick.error) throw tick.error;
+    logger.log(lastAsk);
+
+    // onTicker(coin)
+    // .then(tick => {
+    //     if (tick && tick.error) throw tick.error;
 
         splits.forEach((split, index) => {
-            var price = tick.ask;
-            price = price * 0.7;
+            var price = lastAsk * 1.05;
+            // price = price * 0.7;
             var qty = Math.floor((split / price) / lot);
 
             onBuy(coin, price, qty, 'IOC');
@@ -38,6 +40,6 @@ module.exports = function onConfig(...args) {
                 onSell(coin, target, qty);
             }, 1000 + (100 * index));
         });
-    })
-    .catch(logger.error);
+    // })
+    // .catch(logger.error);
 }

@@ -1,11 +1,17 @@
 var logger = require('../../log/logger');
 
 module.exports = function onSymbols() {
-    console.log(this);
     return this.rest.getSymbols()
         .then(resp => {
-            // logger.log(resp);
-            return resp.symbols;
+            return resp.symbols.reduce((out, s) => {
+                out[s.symbol] = Object.assign(s, {
+                    last: {
+                        ask: null,
+                        bid: null
+                    }
+                });
+                return out;
+            }, {});
         })
         .catch(logger.error);
 }

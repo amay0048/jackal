@@ -31,7 +31,10 @@ module.exports = function onLine(line) {
             onTactic.apply(null, input);
             break;
         default:
-            logger.log('onLine: unrecognised command');
+            var input = line.split(separator);
+            input.unshift('pump');
+            onTactic.apply(null, input);
+            // logger.log('onLine: unrecognised command');
             // throw new JkError('onLine: unrecognised command');
     }
 }
