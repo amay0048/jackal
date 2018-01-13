@@ -3,7 +3,7 @@ global.Client = {
   Hitbtc: require('./client/hitbtc/__init')
 };
 
-var cliParser = require('./cli/parser');
+var onLine = require('./cli/_onLine');
 
 var readline = require('readline');
 var rl = readline.createInterface({
@@ -12,4 +12,4 @@ var rl = readline.createInterface({
   terminal: false
 });
 
-rl.on('line', cliParser);
+rl.on('line', onLine);

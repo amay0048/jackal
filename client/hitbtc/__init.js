@@ -3,6 +3,7 @@ const HitBTC = require('hitbtc-api');
 const onSymbols = require('./onSymbols');
 const onTicker = require('./onTicker');
 const onBalance = require('./onBalance');
+const onOrder = require('./onOrder');
 
 let { public, secret } = require('./keys.json');
 
@@ -28,6 +29,22 @@ JkHitbtc.prototype.setDemo = function (isDemo) {
 
 JkHitbtc.prototype.onBalance = function (...args) {
     onBalance.apply(this, args);
+}
+
+JkHitbtc.prototype.onOrder = function (...args) {
+    onOrder.apply(this, args);
+}
+
+JkHitbtc.prototype.onBuy = function (...args) {
+    args.unshift('limit');
+    args.unshift('buy');
+    this.onOrder.apply(this, args);
+}
+
+JkHitbtc.prototype.onSell = function (...args) {
+    args.unshift('limit');
+    args.unshift('sell');
+    this.onOrder.apply(this, args);
 }
 
 module.exports = new JkHitbtc();

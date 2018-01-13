@@ -1,6 +1,7 @@
 var JkError = require('../cli/error');
 var onExchange = require('./onExchange');
 var onStake = require('./onStake');
+var onBasePair = require('./onBasePair');
 var onDemo = require('./onDemo');
 var onEcho = require('./onEcho');
 
@@ -10,6 +11,9 @@ module.exports = function onConfig(...args) {
     switch(args.shift()) {
         case 'exchange':
             onExchange.apply(null, args);
+            break;
+        case 'base':
+            onBasePair.apply(null, args);
             break;
         case 'stake':
             onStake.apply(null, args);
