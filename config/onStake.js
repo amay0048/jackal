@@ -1,4 +1,4 @@
-var logger = require('../log/logger');
+const logger = require('../log/logger');
 
 module.exports = function onStake(percent) {
     logger.log(`percent stake => ${percent}`);

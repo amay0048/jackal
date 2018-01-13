@@ -1,10 +1,13 @@
+const onBalance = require('../trade/onBalance');
+const base = require('./base.json');
+
 function __Config() {
-    this.exchange = 'hitbtc';
-    this.trade = {
-        base: 'BTC',
-        stake: 1
-    };
+    Object.assign(this, base);
     return this;
+}
+
+__Config.prototype.init = function init() {
+    onBalance();
 }
 
 __Config.prototype.setExchange = function setExchange(exchange) {
@@ -16,7 +19,7 @@ __Config.prototype.getTrade = function getTrade(symbol) {
 }
 
 __Config.prototype.setBasePair = function setBasePair(symbol) {
-    this.trade.base = symbol;
+    this.trade.base = String(symbol).toUpperCase();
 }
 
 __Config.prototype.setStake = function setStake(percent) {
@@ -34,11 +37,6 @@ __Config.prototype.setDemo = function setDemo(value) {
 
 __Config.prototype.setBalance = function setBalance(value) {
     this.balance = value;
-    // try {
-    //     this.balance = Number(value);
-    // } catch (e) {
-    //     this.balance = Number(value);
-    // }
 }
 
 module.exports = new __Config();

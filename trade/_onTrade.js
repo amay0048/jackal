@@ -1,8 +1,8 @@
 const JkError = require('../cli/error');
+const logger = require('../log/logger');
 const onBalance = require('./onBalance');
 const onBuy = require('./onBuy');
 const onSell = require('./onSell');
-// const onTicker = require('./onTicker');
 
 var separator = ' ';
 
@@ -18,6 +18,7 @@ module.exports = function onConfig(...args) {
             onSell.apply(null, args);
             break;
         default:
-            throw new JkError('onTrade: unrecognised command');
+            logger.log('onTrade: unrecognised command');
+            // throw new JkError('onTrade: unrecognised command');
     }
 }

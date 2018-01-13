@@ -1,4 +1,5 @@
 const JkError = require('../cli/error');
+const logger = require('../log/logger');
 const onSymbols = require('./onSymbols');
 const onTicker = require('./onTicker');
 
@@ -13,6 +14,7 @@ module.exports = function onConfig(...args) {
             onTicker.apply(null, args);
             break;
         default:
-            throw new JkError('onMarket: unrecognised command');
+            logger.log('onMarket: unrecognised command');
+            // throw new JkError('onMarket: unrecognised command');
     }
 }

@@ -1,7 +1,7 @@
 var logger = require('../../log/logger');
 
 module.exports = function onSymbols() {
-    this.rest.getMyBalance()
+    return this.rest.getMyBalance()
         .then(data => {
             var balance = Object.values(data.balance).filter(function (coin) {
                 return !(coin.cash == '0' && coin.reserved == '0');

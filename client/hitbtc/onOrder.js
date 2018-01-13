@@ -48,9 +48,6 @@ function parseParams(...args) {
 }
 
 module.exports = function onOrder(...args) {
-    var params = parseParams.apply(null, args)
-
-    this.rest.placeOrder(params)
-        .then(logger.log)
-        .catch(logger.error);
+    var params = parseParams.apply(null, args);
+    return this.rest.placeOrder(params);
 }

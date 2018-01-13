@@ -1,0 +1,8 @@
+{
+    "exchange": "hitbtc",
+    "trade": {
+        "base": "ETH",
+        "stake": 1,
+        "target": 0.2
+    }
+}

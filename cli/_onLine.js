@@ -1,8 +1,10 @@
-var JkError = require('./error');
-var onExit = require('./onExit');
-var onConfig = require('../config/_onConfig');
-var onMarket = require('../market/_onMarket');
-var onTrade = require('../trade/_onTrade');
+const JkError = require('./error');
+const logger = require('../log/logger');
+const onExit = require('./onExit');
+const onConfig = require('../config/_onConfig');
+const onMarket = require('../market/_onMarket');
+const onTrade = require('../trade/_onTrade');
+const onTactic = require('../tactic/_onTactic');
 
 var separator = ' ';
 
@@ -23,7 +25,13 @@ module.exports = function onLine(line) {
         case 'trade':
             onTrade.apply(null, input);
             break;
+        case 'pump':
+            input = line.split(separator);
+        case 'tactic':
+            onTactic.apply(null, input);
+            break;
         default:
-            throw new JkError('onLine: unrecognised command');
+            logger.log('onLine: unrecognised command');
+            // throw new JkError('onLine: unrecognised command');
     }
 }

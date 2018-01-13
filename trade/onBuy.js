@@ -1,13 +1,12 @@
-var logger = require('../log/logger');
-var JkError = require('../cli/error');
-var exchange = global.Config.exchange;
+const JkError = require('../cli/error');
+const logger = require('../log/logger');
 
 module.exports = function onBuy(...args) {
     logger.log(`buy =>`, args);
-
+    var exchange = global.Config.exchange;
     switch(exchange) {
         case 'hitbtc':
-            global.Client.Hitbtc.onBuy.apply(global.Client.Hitbtc, args);
+            return global.Client.Hitbtc.onBuy.apply(global.Client.Hitbtc, args);
             break;
         default:
             throw new JkError('onSymbols: the command is not supported by the current exchange');

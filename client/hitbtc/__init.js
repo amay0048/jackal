@@ -8,16 +8,24 @@ const onOrder = require('./onOrder');
 let { public, secret } = require('./keys.json');
 
 function JkHitbtc() {
+    this.symbols = [];
     this.rest = new HitBTC.default({ key: public, secret: secret, isDemo: false });
     // this.socket = {};
 }
 
+JkHitbtc.prototype.init = function () {
+    this.onSymbols().then(symbols => {
+        console.log(symbols);
+        this.symbols = symbols;
+    });
+}
+
 JkHitbtc.prototype.onSymbols = function (...args) {
-    onSymbols.apply(this, args);
+    return onSymbols.apply(this, args);
 }
 
 JkHitbtc.prototype.onTicker = function (...args) {
-    onTicker.apply(this, args);
+    return onTicker.apply(this, args);
 }
 
 JkHitbtc.prototype.setDemo = function (isDemo) {
@@ -28,23 +36,27 @@ JkHitbtc.prototype.setDemo = function (isDemo) {
 }
 
 JkHitbtc.prototype.onBalance = function (...args) {
-    onBalance.apply(this, args);
+    return onBalance.apply(this, args);
 }
 
 JkHitbtc.prototype.onOrder = function (...args) {
-    onOrder.apply(this, args);
+    return onOrder.apply(this, args);
 }
 
 JkHitbtc.prototype.onBuy = function (...args) {
     args.unshift('limit');
     args.unshift('buy');
-    this.onOrder.apply(this, args);
+    return this.onOrder.apply(this, args);
 }
 
 JkHitbtc.prototype.onSell = function (...args) {
     args.unshift('limit');
     args.unshift('sell');
-    this.onOrder.apply(this, args);
+    return this.onOrder.apply(this, args);
+}
+
+JkHitbtc.prototype.getSymbolMeta = function (symbol) {
+    return this.symbols.find(s => (s.symbol == symbol));
 }
 
 module.exports = new JkHitbtc();

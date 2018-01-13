@@ -1,9 +1,10 @@
-var JkError = require('../cli/error');
-var onExchange = require('./onExchange');
-var onStake = require('./onStake');
-var onBasePair = require('./onBasePair');
-var onDemo = require('./onDemo');
-var onEcho = require('./onEcho');
+const JkError = require('../cli/error');
+const logger = require('../log/logger');
+const onExchange = require('./onExchange');
+const onStake = require('./onStake');
+const onBasePair = require('./onBasePair');
+const onDemo = require('./onDemo');
+const onEcho = require('./onEcho');
 
 var separator = ' ';
 
@@ -25,6 +26,7 @@ module.exports = function onConfig(...args) {
             onEcho.apply(null, args);
             break;
         default:
-            throw new JkError('onConfig: unrecognised command');
+            logger.log('onConfig: unrecognised command');
+            // throw new JkError('onConfig: unrecognised command');
     }
 }

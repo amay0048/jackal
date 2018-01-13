@@ -3,6 +3,9 @@ global.Client = {
   Hitbtc: require('./client/hitbtc/__init')
 };
 
+global.Client.Hitbtc.init();
+global.Config.init();
+
 var onLine = require('./cli/_onLine');
 
 var readline = require('readline');
