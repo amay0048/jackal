@@ -28,6 +28,10 @@ JkHitbtc.prototype.onSymbols = function (...args) {
     return onSymbols.apply(this, args);
 }
 
+JkHitbtc.prototype.getSymbolMeta = function (symbol) {
+    return this.symbols[symbol];
+}
+
 JkHitbtc.prototype.onTicker = function (...args) {
     return onTicker.apply(this, args);
 }
@@ -57,10 +61,6 @@ JkHitbtc.prototype.onSell = function (...args) {
     args.unshift('limit');
     args.unshift('sell');
     return this.onOrder.apply(this, args);
-}
-
-JkHitbtc.prototype.getSymbolMeta = function (symbol) {
-    return this.symbols[symbol];
 }
 
 module.exports = new JkHitbtc();

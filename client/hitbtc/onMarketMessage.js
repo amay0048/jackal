@@ -10,7 +10,7 @@ module.exports = function onMarketMessage(data) {
     }
 
     if (this.symbols && refresh.ask[0] && refresh.ask[0].size) {
-        logger.market(`${refresh.timestamp} - ${refresh.symbol}: bid =>`, refresh.bid[0]);
+        logger.market(`${refresh.timestamp} - ${refresh.symbol}: ask =>`, refresh.ask[0]);
         this.symbols[refresh.symbol].last.ask = Number(refresh.ask[0].price);
     }
     if (this.symbols && refresh.bid[0] && refresh.bid[0].size) {

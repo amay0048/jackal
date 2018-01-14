@@ -6,6 +6,9 @@ module.exports = function onBalance(...args) {
         case 'hitbtc':
             return global.Client.Hitbtc.onBalance.apply(global.Client.Hitbtc, args);
             break;
+        case 'binance':
+            return global.Client.Binance.onBalance.apply(global.Client.Binance, args);
+            break;
         default:
             throw new JkError('onSymbols: the command is not supported by the current exchange');
     }

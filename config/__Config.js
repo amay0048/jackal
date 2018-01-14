@@ -1,5 +1,7 @@
-const onBalance = require('../trade/onBalance');
+const tradeOnBalance = require('../trade/onBalance');
 const base = require('./base.json');
+const logger = require('../log/logger');
+const onBalance = require('./onBalance');
 
 function __Config() {
     Object.assign(this, base);
@@ -7,7 +9,10 @@ function __Config() {
 }
 
 __Config.prototype.init = function init() {
-    onBalance();
+    tradeOnBalance().then((balance) => {
+        logger.log(balance);
+        this.setBalance(balance);
+    });
 }
 
 __Config.prototype.setExchange = function setExchange(exchange) {
@@ -37,6 +42,10 @@ __Config.prototype.setDemo = function setDemo(value) {
 
 __Config.prototype.setBalance = function setBalance(value) {
     this.balance = value;
+}
+
+__Config.prototype.getBalance = function getBalance() {
+    return onBalance.apply(this);
 }
 
 __Config.prototype.setMonitorCoin = function (coin) {
