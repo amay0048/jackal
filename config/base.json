@@ -1,8 +1,8 @@
 {
-    "exchange": "binance",
+    "exchange": "hitbtc",
     "trade": {
-        "base": "ETH",
-        "stake": 0.1,
+        "base": "BTC",
+        "stake": 1,
         "target": 0.2
     },
     "monitor": {

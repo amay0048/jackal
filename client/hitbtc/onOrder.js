@@ -31,7 +31,7 @@ function parseParams(...args) {
     var guid = (S4() + S4() + "-" + S4() + "-4" + S4().substr(0,3) + "-" + S4() + "-" + S4() + S4()).toLowerCase();
     var symbol = String(coin).concat(global.Config.trade.base).toUpperCase();
 
-    this.getSymbolMeta(symbol);
+    var symbolMeta = this.getSymbolMeta(symbol);
     var lot = symbolMeta.lot;
 
     // Careful for truthy types
@@ -53,6 +53,6 @@ function parseParams(...args) {
 }
 
 module.exports = function onOrder(...args) {
-    var params = parseParams.apply(null, args);
+    var params = parseParams.apply(this, args);
     return this.rest.placeOrder(params);
 }

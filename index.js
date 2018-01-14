@@ -6,8 +6,8 @@ global.Client = {
   Binance: require('./client/binance/__init')
 };
 
-// global.Client.Hitbtc.init();
-global.Client.Binance.init();
+global.Client.Hitbtc.init();
+// global.Client.Binance.init();
 global.Config.init();
 
 var onLine = require('./cli/_onLine');
