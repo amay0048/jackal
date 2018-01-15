@@ -3,7 +3,6 @@ const logger = require('../../log/logger');
 module.exports = function onMarketMessage(data) {
 
     var refresh = data;
-
     if (this.symbols && refresh.askDepth[0] && Number(refresh.askDepth[0].quantity)) {
         logger.market(`${refresh.eventTime} - ${refresh.symbol}: ask =>`, refresh.askDepth[0]);
         this.symbols[refresh.symbol].last.ask = Number(refresh.askDepth[0].price);

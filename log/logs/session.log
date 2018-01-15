@@ -1,118 +1,141 @@
-{ BTC: { currency_code: 'BTC', cash: '0.000077284', reserved: '0' },
-  LTC: { currency_code: 'LTC', cash: '0.005687380', reserved: '0' },
-  USD: { currency_code: 'USD', cash: '7.5357592', reserved: '0' } }
-1515904245747 - LTCBTC: ask => { price: '0.01810', size: 24 }
-1515904245848 - LTCBTC: bid => { price: '0.01806', size: 441 }
-1515904245848 - LTCBTC: ask => { price: '0.01812', size: 125 }
-1515904245970 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904246057 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904246157 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904246252 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904246374 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904246374 - LTCBTC: ask => { price: '0.01809', size: 35 }
-1515904246568 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904246651 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904246746 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904246746 - LTCBTC: ask => { price: '0.01818', size: 37 }
-1515904246858 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904247049 - LTCBTC: bid => { price: '0.01797', size: 615 }
-1515904247049 - LTCBTC: ask => { price: '0.01809', size: 30 }
-1515904247167 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904247167 - LTCBTC: ask => { price: '0.01822', size: 163 }
-1515904247262 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904247388 - LTCBTC: bid => { price: '0.01802', size: 276 }
-1515904247434 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904247576 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904247653 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904247742 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904247862 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904247862 - LTCBTC: ask => { price: '0.01813', size: 55 }
-1515904247957 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904247957 - LTCBTC: ask => { price: '0.01818', size: 51 }
-1515904248059 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904248135 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904248135 - LTCBTC: ask => { price: '0.01809', size: 35 }
-1515904248368 - LTCBTC: ask => { price: '0.01810', size: 43 }
-1515904248447 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904248556 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904248651 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904248651 - LTCBTC: ask => { price: '0.01809', size: 30 }
-1515904248740 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904248871 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904248871 - LTCBTC: ask => { price: '0.01820', size: 283 }
-1515904248950 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904249037 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904249188 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904249244 - LTCBTC: bid => { price: '0.01804', size: 10 }
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-buy => [ 'ltc', 0.0182, 0.00042463736263736264, 'IOC' ]
-1515904249364 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904249453 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904249453 - LTCBTC: ask => { price: '0.01809', size: 35 }
-1515904249540 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904249540 - LTCBTC: ask => { price: '0.01809', size: 30 }
-1515904249637 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904249762 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904249762 - LTCBTC: ask => { price: '0.01810', size: 29 }
-1515904249858 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904249959 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904249959 - LTCBTC: ask => { price: '0.01813', size: 166 }
-1515904250079 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904250173 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904250359 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904250359 - LTCBTC: ask => { price: '0.01822', size: 944 }
-1515904250462 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904250538 - LTCBTC: bid => { price: '0.01804', size: 10 }
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-1515904250663 - LTCBTC: bid => { price: '0.01805', size: 117 }
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-1515904250756 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904250863 - LTCBTC: bid => { price: '0.01804', size: 10 }
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-1515904250943 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904250943 - LTCBTC: ask => { price: '0.01822', size: 450 }
-1515904251168 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904251256 - LTCBTC: bid => { price: '0.01804', size: 10 }
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-1515904251334 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904251474 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904251555 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904251555 - LTCBTC: ask => { price: '0.01812', size: 18 }
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-1515904251650 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904251650 - LTCBTC: ask => { price: '0.01809', size: 35 }
-1515904251755 - LTCBTC: bid => { price: '0.01805', size: 107 }
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-1515904251842 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904251943 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904251943 - LTCBTC: ask => { price: '0.01812', size: 55 }
-sell => [ 'ltc', 0.021840000000000002, 0.00042463736263736264 ]
-1515904252056 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904252165 - LTCBTC: bid => { price: '0.01760', size: 5 }
-1515904252255 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904252354 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904252354 - LTCBTC: ask => { price: '0.01808', size: 58 }
-1515904252450 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904252450 - LTCBTC: ask => { price: '0.01845', size: 35 }
-1515904252538 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904252538 - LTCBTC: ask => { price: '0.01809', size: 30 }
-1515904252659 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904252737 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904252849 - LTCBTC: bid => { price: '0.01804', size: 10 }
-1515904252950 - LTCBTC: bid => { price: '0.01805', size: 117 }
-1515904253075 - LTCBTC: bid => { price: '0.01805', size: 107 }
-1515904253075 - LTCBTC: ask => { price: '0.01818', size: 37 }
-1515904253150 - LTCBTC: bid => { price: '0.01797', size: 265 }
-1515904253150 - LTCBTC: ask => { price: '0.01819', size: 276 }
-1515904253260 - LTCBTC: bid => { price: '0.01804', size: 10 }
+onBalance => complete
+1516011468351 - LTCBTC: ask => { price: '0.01748', size: 2796 }
+1516011468475 - LTCBTC: bid => { price: '0.01726', size: 570 }
+1516011468475 - LTCBTC: ask => { price: '0.01733', size: 44 }
+1516011468578 - LTCBTC: bid => { price: '0.01731', size: 112 }
+1516011468578 - LTCBTC: ask => { price: '0.01732', size: 153 }
+1516011468659 - LTCBTC: bid => { price: '0.01730', size: 6 }
+1516011468659 - LTCBTC: ask => { price: '0.01736', size: 396 }
+1516011468922 - LTCBTC: bid => { price: '0.01726', size: 3 }
+1516011468922 - LTCBTC: ask => { price: '0.01736', size: 116 }
+1516011469063 - LTCBTC: bid => { price: '0.01725', size: 286 }
+1516011469237 - LTCBTC: bid => { price: '0.01725', size: 567 }
+1516011469362 - LTCBTC: bid => { price: '0.01710', size: 1916 }
+1516011469436 - LTCBTC: bid => { price: '0.01725', size: 286 }
+1516011469547 - LTCBTC: bid => { price: '0.01724', size: 590 }
+1516011469547 - LTCBTC: ask => { price: '0.01732', size: 197 }
+1516011469668 - LTCBTC: bid => { price: '0.01725', size: 5 }
+1516011469865 - LTCBTC: bid => { price: '0.01723', size: 580 }
+1516011469865 - LTCBTC: ask => { price: '0.01748', size: 637 }
+1516011470068 - LTCBTC: ask => { price: '0.01748', size: 2144 }
+1516011470641 - LTCBTC: ask => { price: '0.01744', size: 1602 }
+1516011470961 - LTCBTC: ask => { price: '0.01744', size: 935 }
+1516011471561 - LTCBTC: bid => { price: '0.01710', size: 4 }
+1516011471561 - LTCBTC: ask => { price: '0.01740', size: 637 }
+1516011471647 - LTCBTC: bid => { price: '0.01715', size: 366 }
+1516011471647 - LTCBTC: ask => { price: '0.01751', size: 4321 }
+1516011472241 - LTCBTC: bid => { price: '0.01717', size: 413 }
+1516011472241 - LTCBTC: ask => { price: '0.01737', size: 296 }
+1516011472412 - LTCBTC: ask => { price: '0.01732', size: 44 }
+1516011472661 - LTCBTC: bid => { price: '0.01724', size: 314 }
+1516011472757 - LTCBTC: bid => { price: '0.01724', size: 595 }
+1516011472865 - LTCBTC: bid => { price: '0.01725', size: 281 }
+1516011472865 - LTCBTC: ask => { price: '0.01734', size: 1 }
+1516011473052 - LTCBTC: ask => { price: '0.01740', size: 143 }
+1516011473169 - LTCBTC: ask => { price: '0.01752', size: 3553 }
+1516011473245 - LTCBTC: bid => { price: '0.01729', size: 19 }
+1516011473245 - LTCBTC: ask => { price: '0.02492', size: 1 }
+1516011473381 - LTCBTC: bid => { price: '0.01685', size: 2 }
+1516011473381 - LTCBTC: ask => { price: '0.01731', size: 153 }
+1516011473477 - LTCBTC: bid => { price: '0.01729', size: 9 }
+1516011473477 - LTCBTC: ask => { price: '0.01737', size: 122 }
+1516011473592 - LTCBTC: bid => { price: '0.01716', size: 1063 }
+1516011473776 - LTCBTC: bid => { price: '0.01038', size: 95 }
+1516011473942 - LTCBTC: bid => { price: '0.01729', size: 25 }
+1516011473942 - LTCBTC: ask => { price: '0.01735', size: 48 }
+1516011474170 - LTCBTC: ask => { price: '0.01736', size: 280 }
+1516011474250 - LTCBTC: ask => { price: '0.01737', size: 726 }
+1516011474466 - LTCBTC: bid => { price: '0.01710', size: 2567 }
+1516011474839 - LTCBTC: bid => { price: '0.01727', size: 215 }
+1516011474957 - LTCBTC: ask => { price: '0.01736', size: 328 }
+1516011475044 - LTCBTC: bid => { price: '0.01730', size: 6 }
+1516011475044 - LTCBTC: ask => { price: '0.01737', size: 436 }
+1516011475152 - LTCBTC: ask => { price: '0.01736', size: 280 }
+1516011475360 - LTCBTC: ask => { price: '0.01736', size: 328 }
+Error: No last ask for symbol
+    at /Users/anthonymay/Development/amay0048/jackal/market/onLastAsk.js:12:49
+    at new Promise (<anonymous>)
+    at onLastAsk (/Users/anthonymay/Development/amay0048/jackal/market/onLastAsk.js:8:20)
+    at onConfig (/Users/anthonymay/Development/amay0048/jackal/tactic/onPump.js:22:5)
+    at onConfig (/Users/anthonymay/Development/amay0048/jackal/tactic/_onTactic.js:11:24)
+    at Interface.onLine (/Users/anthonymay/Development/amay0048/jackal/cli/_onLine.js:36:22)
+    at Interface.emit (events.js:159:13)
+    at Interface._onLine (readline.js:287:10)
+    at Interface._normalWrite (readline.js:435:12)
+    at ReadStream.ondata (readline.js:146:10)
+    at ReadStream.emit (events.js:159:13)
+    at addChunk (_stream_readable.js:265:12)
+    at readableAddChunk (_stream_readable.js:252:11)
+    at ReadStream.Readable.push (_stream_readable.js:209:10)
+    at TTY.onread (net.js:608:20)
+onPump: Last Ask =>  0.00010466
+onPump: Buy Ask 0.00010570660000000001
+onPump: Sell Price =>  0.00012684792
+buy => [ 'xem', 0.00010570660000000001, 0.2193354057362549, 'IOC' ]
+buy => [ 'xem', 0.00010570660000000001, 0.2193354057362549, 'IOC' ]
+buy => [ 'xem', 0.00010570660000000001, 0.2193354057362549, 'IOC' ]
+1516011478563 - XEMBTC: bid => { price: '0.00010256', size: 200 }
+1516011478765 - XEMBTC: bid => { price: '0.00010253', size: 200 }
+1516011478855 - XEMBTC: bid => { price: '0.00010275', size: 3 }
+1516011478960 - XEMBTC: bid => { price: '0.00010255', size: 200 }
+1516011479059 - XEMBTC: bid => { price: '0.00010256', size: 200 }
+1516011479373 - XEMBTC: bid => { price: '0.00010220', size: 40 }
+1516011479552 - XEMBTC: bid => { price: '0.00010253', size: 200 }
+1516011479640 - XEMBTC: bid => { price: '0.00010254', size: 200 }
+1516011479640 - XEMBTC: ask => { price: '0.00010531', size: 29021 }
+1516011479769 - XEMBTC: bid => { price: '0.00010255', size: 200 }
+sell => [ 'xem', 0.00012684792, 0.2193354057362549 ]
+1516011479865 - XEMBTC: bid => { price: '0.00010256', size: 200 }
+sell => [ 'xem', 0.00012684792, 0.2193354057362549 ]
+1516011479978 - XEMBTC: ask => { price: '0.00010526', size: 29021 }
+sell => [ 'xem', 0.00012684792, 0.2193354057362549 ]
+1516011480010 - XEMBTC: bid => { price: '0.00010253', size: 200 }
+1516011480688 - XEMBTC: bid => { price: '0.00010275', size: 3 }
+1516011480688 - XEMBTC: ask => { price: '0.00010323', size: 887 }
+Error: No last ask for symbol
+    at /Users/anthonymay/Development/amay0048/jackal/market/onLastAsk.js:12:49
+    at new Promise (<anonymous>)
+    at onLastAsk (/Users/anthonymay/Development/amay0048/jackal/market/onLastAsk.js:8:20)
+    at onConfig (/Users/anthonymay/Development/amay0048/jackal/tactic/onPump.js:22:5)
+    at onConfig (/Users/anthonymay/Development/amay0048/jackal/tactic/_onTactic.js:11:24)
+    at Interface.onLine (/Users/anthonymay/Development/amay0048/jackal/cli/_onLine.js:36:22)
+    at Interface.emit (events.js:159:13)
+    at Interface._onLine (readline.js:287:10)
+    at Interface._normalWrite (readline.js:435:12)
+    at ReadStream.ondata (readline.js:146:10)
+    at ReadStream.emit (events.js:159:13)
+    at addChunk (_stream_readable.js:265:12)
+    at readableAddChunk (_stream_readable.js:252:11)
+    at ReadStream.Readable.push (_stream_readable.js:209:10)
+    at TTY.onread (net.js:608:20)
+1516011482042 - DLTBTC: bid => { price: '0.000073', size: 365930 }
+1516011482042 - DLTBTC: ask => { price: '0.000074', size: 1370106 }
+base pair => eth
+onPump: error input => [ 'dlt' ] Error: onBalance: ETH no balance available
+    at checkBalance (/Users/anthonymay/Development/amay0048/jackal/config/onBalance.js:6:29)
+    at __Config.onBalance (/Users/anthonymay/Development/amay0048/jackal/config/onBalance.js:13:19)
+    at __Config.getBalance (/Users/anthonymay/Development/amay0048/jackal/config/__Config.js:65:22)
+    at onConfig (/Users/anthonymay/Development/amay0048/jackal/tactic/onPump.js:18:31)
+    at onConfig (/Users/anthonymay/Development/amay0048/jackal/tactic/_onTactic.js:11:24)
+    at Interface.onLine (/Users/anthonymay/Development/amay0048/jackal/cli/_onLine.js:36:22)
+    at Interface.emit (events.js:159:13)
+    at Interface._onLine (readline.js:287:10)
+    at Interface._normalWrite (readline.js:435:12)
+    at ReadStream.ondata (readline.js:146:10)
+    at ReadStream.emit (events.js:159:13)
+    at addChunk (_stream_readable.js:265:12)
+    at readableAddChunk (_stream_readable.js:252:11)
+    at ReadStream.Readable.push (_stream_readable.js:209:10)
+    at TTY.onread (net.js:608:20)
+base pair => btc
+onPump: Last Ask =>  0.000074
+onPump: Buy Ask 0.00007473999999999999
+onPump: Sell Price =>  0.00008968799999999999
+buy => [ 'dlt', 0.00007473999999999999, 0.31021139951833027, 'IOC' ]
+buy => [ 'dlt', 0.00007473999999999999, 0.31021139951833027, 'IOC' ]
+buy => [ 'dlt', 0.00007473999999999999, 0.31021139951833027, 'IOC' ]
+sell => [ 'dlt', 0.00008968799999999999, 0.31021139951833027 ]
+sell => [ 'dlt', 0.00008968799999999999, 0.31021139951833027 ]
+sell => [ 'dlt', 0.00008968799999999999, 0.31021139951833027 ]
+1516011508383 - DLTBTC: ask => { price: '0.000082', size: 412843 }
+1516011509564 - DLTBTC: ask => { price: '0.000081', size: 681033 }

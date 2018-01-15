@@ -11,6 +11,9 @@ module.exports = function onBuy(...args) {
         case 'binance':
             return global.Client.Binance.onBuy.apply(global.Client.Binance, args);
             break;
+        case 'cryptopia':
+            return global.Client.Cryptopia.onBuy.apply(global.Client.Cryptopia, args);
+            break;
         default:
             throw new JkError('onBuy: the command is not supported by the current exchange');
     }

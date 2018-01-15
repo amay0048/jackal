@@ -86,6 +86,6 @@ function parseParams(...args) {
 
 module.exports = function onOrder(...args) {
     var params = parseParams.apply(this, args);
-    console.log(params);
-    return this.api.order(params);
+    console.log('DEMO');
+    // return this.api.order(params);
 }

@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "binance-api-node": "^0.5.0",
+    "cryptopia.js": "^1.0.0",
     "hitbtc-api": "^3.0.2"
   }
 }

@@ -9,6 +9,9 @@ module.exports = function onConfig(...args) {
         case 'binance':
             return global.Client.Binance.getSymbolMeta.apply(global.Client.Binance, args);
             break;
+        case 'cryptopia':
+            return global.Client.Cryptopia.getSymbolMeta.apply(global.Client.Cryptopia, args);
+            break;
         default:
             throw new JkError('onSymbols: the command is not supported by the current exchange');
     }

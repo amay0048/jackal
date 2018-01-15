@@ -3,11 +3,10 @@ const logger = require('./log/logger');
 global.Config = require('./config/__Config');
 global.Client = {
   Hitbtc: require('./client/hitbtc/__init'),
-  Binance: require('./client/binance/__init')
+  Binance: require('./client/binance/__init'),
+  Cryptopia: require('./client/cryptopia/__init')
 };
 
-global.Client.Hitbtc.init();
-// global.Client.Binance.init();
 global.Config.init();
 
 var onLine = require('./cli/_onLine');

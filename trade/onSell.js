@@ -10,7 +10,10 @@ module.exports = function onSell(...args) {
             break;
         case 'binance':
             return global.Client.Binance.onSell.apply(global.Client.Binance, args);
-            break;            
+            break;
+        case 'cryptopia':
+            return global.Client.Cryptopia.onSell.apply(global.Client.Cryptopia, args);
+            break;
         default:
             throw new JkError('onSymbols: the command is not supported by the current exchange');
     }

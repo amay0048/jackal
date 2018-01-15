@@ -2,10 +2,6 @@
     "exchange": "hitbtc",
     "trade": {
         "base": "BTC",
-        "stake": 1,
-        "target": 0.2
-    },
-    "monitor": {
-        "coin": "LTC"
+        "monitor": "LTC"
     }
 }
