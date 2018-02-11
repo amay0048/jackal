@@ -3,5 +3,6 @@
     "trade": {
         "base": "BTC",
         "monitor": "LTC"
-    }
+    },
+    "demo": false
 }

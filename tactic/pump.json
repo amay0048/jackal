@@ -1,7 +1,7 @@
 {
     "stake": 0.9,
     "loading": {
-        "buy": 0.01,
-        "sell": 0.2
+        "buy": 0.02,
+        "sell": 0.22
     }
 }

@@ -42,18 +42,19 @@ module.exports = function onOrder(...args) {
     var params = parseParams.apply(this, args);
     var { Market, TradePairId, Type, Rate, Amount } = params;
 
-    console.log('DEMO');
-    // return this.api.SubmitTrade(
-    //     Market,
-    //     TradePairId,
-    //     Type,
-    //     Rate,
-    //     Amount
-    // ).then(resp => {
-    //     logger.log(resp);
-    //     return resp;
-    // }).catch(resp => {
-    //     logger.error(resp);
-    //     throw resp;
-    // });
+    if (global.Config.demo)
+        return logger.log('DEMO');
+    return this.api.SubmitTrade(
+        Market,
+        TradePairId,
+        Type,
+        Rate,
+        Amount
+    ).then(resp => {
+        logger.log(resp);
+        return resp;
+    }).catch(resp => {
+        logger.error(resp);
+        throw resp;
+    });
 }

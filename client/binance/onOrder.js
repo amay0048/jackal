@@ -76,8 +76,8 @@ function parseParams(...args) {
         symbol: symbol
     };
 
-    if (price) params.price = Number.parseFloat(price).toPrecision(meta.baseAssetPrecision);
-    if (quantity) params.quantity = quote;
+    if (price) params.price = parseFloat(price).toFixed(parseInt(meta.baseAssetPrecision, 10));
+    if (quantity) params.quantity = quote.toPrecision(parseInt(meta.baseAssetPrecision, 10));
     if (timeInForce) params.timeInForce = timeInForce;
     if (stopPrice) params.stopPrice = Number(stopPrice);
 
@@ -86,6 +86,8 @@ function parseParams(...args) {
 
 module.exports = function onOrder(...args) {
     var params = parseParams.apply(this, args);
-    console.log('DEMO');
-    // return this.api.order(params);
+    console.log(params);
+    if (global.Config.demo)
+        return logger.log('DEMO');
+    return this.api.order(params);
 }

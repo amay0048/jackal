@@ -54,6 +54,7 @@ function parseParams(...args) {
 
 module.exports = function onOrder(...args) {
     var params = parseParams.apply(this, args);
-    console.log('DEMO');
-    // return this.rest.placeOrder(params);
+    if (global.Config.demo)
+        return logger.log('DEMO');
+    return this.rest.placeOrder(params);
 }

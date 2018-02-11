@@ -54,7 +54,7 @@ __Config.prototype.setStake = function (percent) {
 
 __Config.prototype.setDemo = function (value) {
     this.demo = (typeof value != 'undefined' && value && value == 'true');
-    global.Client.Hitbtc.setDemo(this.demo);
+    // global.Client.Hitbtc.setDemo(this.demo);
 }
 
 __Config.prototype.setBalance = function (value) {
